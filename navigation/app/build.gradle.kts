@@ -52,8 +52,13 @@ dependencies {
     val navVersion: String by rootProject.extra
     implementation("androidx.navigation:navigation-fragment-ktx:$navVersion")
     implementation("androidx.navigation:navigation-ui-ktx:$navVersion")
+    androidTestImplementation("androidx.navigation:navigation-testing:$navVersion")
 
-    testImplementation("junit:junit:4.13.2")
+    val fragmentVersion = "1.4.1"
+    debugImplementation("androidx.fragment:fragment-testing:$fragmentVersion")
+
+    testImplementation(kotlin("test"))
+    testImplementation("io.mockk:mockk:1.11.0")
     androidTestImplementation("androidx.test.ext:junit:1.1.3")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.4.0")
 }
