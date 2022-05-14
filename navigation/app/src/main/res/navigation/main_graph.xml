@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/firstFragment">
+
+    <fragment
+        android:id="@+id/firstFragment"
+        android:name="com.gsesdras.navigation.ui.first.FirstFragment"
+        android:label="FirstFragment" >
+        <action
+            android:id="@+id/to_secondFragment"
+            app:destination="@id/secondFragment"
+            app:enterAnim="@anim/nav_slide_enter_anim"
+            app:exitAnim="@anim/nav_slide_exit_anim"
+            app:popEnterAnim="@anim/nav_slide_pop_enter_anim"
+            app:popExitAnim="@anim/nav_slide_pop_exit_anim"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/secondFragment"
+        android:name="com.gsesdras.navigation.ui.second.SecondFragment"
+        android:label="SecondFragment" />
+
+</navigation>
